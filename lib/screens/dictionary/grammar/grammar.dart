@@ -86,7 +86,7 @@ class Contiditionals extends StatelessWidget {
                       ),
                       Padding(
                         padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('Примеры',style: TextStyle(fontWeight: FontWeight.bold))),
+                        child: Center(child: Text('Пример Употребления',style: TextStyle(fontWeight: FontWeight.bold))),
                       ),
       
                     ]
@@ -102,7 +102,7 @@ class Contiditionals extends StatelessWidget {
                       ),
                       Padding(
                         padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('If I go to bed late ,its difficult for me to get up on time',)),
+                        child: Center(child: Text('Постоянные факты:\n\nIf I go to bed late ,its difficult for me to get up on time',)),
                       ),
       
                     ]
@@ -120,7 +120,7 @@ class Contiditionals extends StatelessWidget {
                       ),
                       Padding(
                         padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('If you are late again , I will have to fire you',)),
+                        child: Center(child: Text('Реальная ситуация в будущем:\n\nIf you are late again , I will have to fire you',)),
                       ),
       
                     ]
@@ -137,7 +137,7 @@ class Contiditionals extends StatelessWidget {
                       ),
                       Padding(
                         padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('If I were you ,I would do my homework',)),
+                        child: Center(child: Text('Нереальная ситуация в прошлом:\n\nIf I were you ,I would do my homework',)),
                       ),
       
                     ]
@@ -154,7 +154,7 @@ class Contiditionals extends StatelessWidget {
                       ),
                       Padding(
                         padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('If we had set off earlier , we wouldnt have missed train',)),
+                        child: Center(child: Text('Нереальная ситуация в прошлом с условием,справедливым для настоящего:\n\nIf we had set off earlier , we wouldnt have missed train',)),
                       ),
       
                     ]
