@@ -6,23 +6,61 @@ import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 List<Widget> _grammarWidgets = <Widget>[Contiditionals(),ArticlesWidget(),PassiveWidget(),StateWidget()];
 
 
-class Grammar_Home_Widget extends StatelessWidget {
-  const Grammar_Home_Widget({super.key});
+
+class Grammar_Home_Widget_Swipe extends StatefulWidget {
+  Grammar_Home_Widget_Swipe({super.key});
+
+  @override
+  State<Grammar_Home_Widget_Swipe> createState() => _Grammar_Home_Widget_SwipeState();
+}
+
+class _Grammar_Home_Widget_SwipeState extends State<Grammar_Home_Widget_Swipe> {
+      String title = 'Грамматика';
+
+      void changeTitle(int index){
+        switch (index)
+        {
+          case 0:
+            setState(() {
+              title = 'Conditionals';
+            });
+            break;
+          case 1:
+          setState(() {
+              title = 'Articles';
+            });
+            break;
+              case 2:
+          setState(() {
+              title = 'PassiveVoice';
+            });
+            break;
+
+              case 3:
+          setState(() {
+              title = 'Tenses';
+            });
+            break;
+
+        }
+    }
+
   @override
   Widget build(BuildContext context) {
+    
+    
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color_Theme.themecolor,
-        title: 
-      Text('Грамматика'),
-
-
+      appBar: AppBar(  backgroundColor: Color_Theme.themecolor,
+      title: Text(title),
       ),
-      body:       Container(
+      body:  Container(
         color: Color_Theme.wordcolor,
         child: Swiper(
+          onIndexChanged: (index)=> changeTitle(index) ,
             itemBuilder: (context, index) {
+              
               return _grammarWidgets[index];
+            
             },
             indicatorLayout: PageIndicatorLayout.COLOR,
             autoplayDelay: 10000,
@@ -45,20 +83,15 @@ class Grammar_Home_Widget extends StatelessWidget {
   }
 }
 
-
 class Contiditionals extends StatelessWidget {
-  const Contiditionals({super.key});
 
+  const Contiditionals({super.key});
+  final String appbarText = 'Conditionals';
   @override
   Widget build(BuildContext context) {
     return   Column(
+      mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: Center(
-                child: Text("Conditionals",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-              ),
-            ),
             Card(
               color: Color_Theme.tablecolor,
               margin: EdgeInsets.all(10),
@@ -178,14 +211,12 @@ class ArticlesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column( mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: Center(
-                child: Text("Articles",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-              ),
-            ),
+          
+             
+        
+            
             Card(
               color: Color_Theme.tablecolor,
               margin: EdgeInsets.all(10),
@@ -307,14 +338,12 @@ class PassiveWidget extends StatelessWidget {
   @override
 
     Widget build(BuildContext context) {
-    return Column(
+    return Column( mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 25),
-              child: Center(
-                child: Text("Passive voice",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-              ),
-            ),
+            
+             
+          
+            
             Card(
               color: Color_Theme.tablecolor,
               margin: EdgeInsets.all(10),
@@ -562,14 +591,8 @@ class StateWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column( mainAxisSize: MainAxisSize.min,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
-              child: Center(
-                child: Text("Tenses",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-              ),
-            ),
             Card(
               color: Color_Theme.tablecolor,
               margin: EdgeInsets.all(10),

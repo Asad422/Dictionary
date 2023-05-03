@@ -74,7 +74,7 @@ class HomeWidget extends StatelessWidget {
     )),
                 ),
   onPressed: () {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> Grammar_Home_Widget() ));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> Grammar_Home_Widget_Swipe() ));
   },
   child: Container(
     height: 100,
