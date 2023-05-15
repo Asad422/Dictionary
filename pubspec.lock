@@ -193,6 +193,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.0"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: "347d56c26d63519552ef9a569f2a593dda99a81fdbdff13c584b7197cfe05059"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.2"
   fake_async:
     dependency: transitive
     description:
@@ -640,6 +648,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.4"
+  word_generator:
+    dependency: "direct main"
+    description:
+      name: word_generator
+      sha256: "6fc2c1e6d106ea7ad5b9c579815818a4d2544f6c33df62b70a7a63e07f62ae7e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.3"
   xdg_directories:
     dependency: transitive
     description:

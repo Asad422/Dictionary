@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 
 
-List<Widget> _grammarWidgets = <Widget>[Contiditionals(),ArticlesWidget(),PassiveWidget(),StateWidget()];
+List<Widget> _grammarWidgets = <Widget>[Contiditionals(),ArticlesWidget(),PassiveWidget(),StateWidget(),ComparisonWidget(),
+ReportedSpeech()];
 
 
 
@@ -41,6 +42,17 @@ class _Grammar_Home_Widget_SwipeState extends State<Grammar_Home_Widget_Swipe> {
               title = 'Tenses';
             });
             break;
+             case 4:
+          setState(() {
+              title = 'Degrees of Comparison';
+            });
+            break;
+            case 5:
+          setState(() {
+              title = 'Reported Speech';
+            });
+            break;
+            
 
         }
     }
@@ -86,7 +98,7 @@ class _Grammar_Home_Widget_SwipeState extends State<Grammar_Home_Widget_Swipe> {
 class Contiditionals extends StatelessWidget {
 
   const Contiditionals({super.key});
-  final String appbarText = 'Conditionals';
+  
   @override
   Widget build(BuildContext context) {
     return   Column(
@@ -714,6 +726,301 @@ class StateWidget extends StatelessWidget {
                 ])
           ])
 
+            )
+            
+          ],
+        
+      
+    );
+  }
+}
+class ReportedSpeech extends StatelessWidget {
+  const ReportedSpeech({super.key});
+
+  @override
+ @override
+  Widget build(BuildContext context) {
+    return Column( mainAxisSize: MainAxisSize.min,
+          children: [
+            Card(
+              color: Color_Theme.tablecolor,
+              margin: EdgeInsets.all(10),
+              
+              shadowColor: Colors.grey,
+              elevation: 5,
+              child: Table(
+                
+                 columnWidths: const <int, TableColumnWidth>{
+              0: FractionColumnWidth(0.25),
+              1: FractionColumnWidth(0.25),
+              2: FractionColumnWidth(0.5),
+              
+            },
+                border: TableBorder.all(),
+                children:const  [
+                  TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Direct Speech',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Reported Speech',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Example',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                          
+                    TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Present Simple',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Past Simple',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('He said : "I want some oranges."\nHe said he wanted some oranges.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                    TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Present Continuous',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Past Continuous',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('They said : "We are studying hard."\nThey said they were studying hard.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                   TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Present Perfect',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Past Perfect',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('She said : "I have bought new dress"\nShe said she had bought a new dress.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                   TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Past Simple',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Past Perfect',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('She said : "I finished my homework"\nShe said she had finished her homework.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                  TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Will',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Would',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('She said : "I will alway love Tom"\nShe said she would always love Tom.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                  TableRow(
+                     
+                    children: [
+                     
+                      Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Center(child: Text('Can',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Could',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('Tom said : "I can carry 50 kg"\nTom said he could carry 50 kg.',)),
+                      ),
+                    
+      
+                    ]
+                  ),  
+                  
+                  
+  
+                 
+
+            
+          ])
+
+            )
+            
+          ],
+        
+      
+    );
+  }
+}
+class ComparisonWidget extends StatelessWidget {
+  const ComparisonWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column( mainAxisSize: MainAxisSize.min,
+          children: [
+          
+             
+        
+            
+            Card(
+              color: Color_Theme.tablecolor,
+              margin: EdgeInsets.all(10),
+              shadowColor: Colors.grey,
+              elevation: 5,
+              child: Table(
+                
+                 columnWidths: const <int, TableColumnWidth>{
+              0: FractionColumnWidth(0.33),
+              1: FractionColumnWidth(0.33),
+              2: FractionColumnWidth(0.34),
+             
+            },
+                border: TableBorder.all(),
+                children:const  [
+                  TableRow(
+                     
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Center(child: Text('POSITIVE',style: TextStyle(fontWeight: FontWeight.bold),)),
+                      ) ,
+                      Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Center(child: Text('COMPARATIVE',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('SUPERLATIVE',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ),
+                     
+      
+                    ]
+                  ),  
+                  TableRow(
+                     
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Center(child: Text('Short\nBig',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ) ,
+                      Padding(
+                        padding: EdgeInsets.all(11.0),
+                        child: Center(child: Text('+ ER\nshorter\nbigger',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('the ...+EST\nthe shortest\nthe biggest ',)),
+                      ),
+                      
+      
+                    ]
+                  ),  
+                   TableRow(
+                     
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Center(child: Text('Silly\nnarrow',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ) ,
+                      Padding(
+                        padding: EdgeInsets.all(11.0),
+                        child: Center(child: Text('+ ER\nsillier\nnarrower',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('the ...+EST\nthe silliest\nthe narrowest ',)),
+                      ),
+                      
+      
+                    ]
+                  ),  
+                  TableRow(
+                     
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Center(child: Text('Modern\nBeautiful',style: TextStyle(fontWeight: FontWeight.bold))),
+                      ) ,
+                      Padding(
+                        padding: EdgeInsets.all(11.0),
+                        child: Center(child: Text('MORE +\nmore modern \nmore beautiful',)),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(12.0),
+                        child: Center(child: Text('the MOST +\nthe most modern \nthe most beautiful ',)),
+                      ),
+                      
+      
+                    ]
+                  ),  
+
+                    
+                    
+          ])
             )
             
           ],

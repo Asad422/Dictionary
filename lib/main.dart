@@ -1,3 +1,4 @@
+import 'package:app/screens/dictionary/wotd/wotd_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-      home: HomeWidget(),
+      home:HomeWidget(),
     );
   }
 }

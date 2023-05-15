@@ -10,7 +10,7 @@ class GroupFormWidgetModel {
   int index = 0;
 
 
-  void saveWord(BuildContext context,) async {
+  void saveWord(BuildContext context) async {
 
       if(word.isEmpty || translation.isEmpty ){
         return; 
@@ -23,9 +23,19 @@ class GroupFormWidgetModel {
       
       final group = Group(name: word, transaltion: translation);
       await box.add(group);
-      
-     
-      Navigator.of(context).pop();
+      Navigator.pop(context);
+  }
+
+  void saveWordForWotd(BuildContext context) async{
+     if(word.isEmpty || translation.isEmpty ){
+        return; 
+      }
+      if( !Hive.isAdapterRegistered(1)){
+        Hive.registerAdapter(GroupAdapter());
+      }
+     final box =  await Hive.openBox<Group>('groups_box');
+      final group = Group(name: word, transaltion: translation);
+      await box.add(group);
   }
 
   void editWord(BuildContext context,int index) async {
