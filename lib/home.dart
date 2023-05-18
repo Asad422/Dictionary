@@ -28,7 +28,7 @@ class HomeWidget extends StatelessWidget {
                       height: 100,),
                ),
 
-               Text('Учить английский - легко',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+               Text('Учить английский - легко',style: TextStyle(fontSize: 30,fontWeight: FontWeight.w500),),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

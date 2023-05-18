@@ -879,26 +879,7 @@ class ReportedSpeech extends StatelessWidget {
       
                     ]
                   ),  
-                  TableRow(
-                     
-                    children: [
-                     
-                      Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Center(child: Text('Can',)),
-                      ),
-                      Padding(
-                        padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('Could',)),
-                      ),
-                      Padding(
-                        padding:  EdgeInsets.all(12.0),
-                        child: Center(child: Text('Tom said : "I can carry 50 kg"\nTom said he could carry 50 kg.',)),
-                      ),
                     
-      
-                    ]
-                  ),  
                   
                   
   
